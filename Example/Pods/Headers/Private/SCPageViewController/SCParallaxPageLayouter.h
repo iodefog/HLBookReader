@@ -1,0 +1,1 @@
+../../../SCPageViewController/SCPageViewController/Layouters/SCParallaxPageLayouter.h

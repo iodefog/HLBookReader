@@ -1,0 +1,1 @@
+../../../SCScrollView/SCScrollView/SCEasingFunctionProtocol.h

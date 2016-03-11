@@ -1,0 +1,15 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '7.0'
+
+pod 'Masonry', '~> 0.6.3'
+#pod 'SCPageViewController', '~> 2.0.2'
+
+target 'DYMBookReader_Example', :exclusive => true do
+  pod "DYMBookReader", :path => "../"
+end
+
+target 'DYMBookReader_Tests', :exclusive => true do
+  pod "DYMBookReader", :path => "../"
+
+  
+end

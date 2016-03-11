@@ -1,0 +1,24 @@
+PODS:
+  - DYMBookReader (0.2.0):
+    - Masonry (~> 0.6.3)
+    - SCPageViewController (~> 2.0.2)
+  - Masonry (0.6.3)
+  - SCPageViewController (2.0.2):
+    - SCScrollView (~> 1.1)
+  - SCScrollView (1.1.7)
+
+DEPENDENCIES:
+  - DYMBookReader (from `../`)
+  - Masonry (~> 0.6.3)
+
+EXTERNAL SOURCES:
+  DYMBookReader:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DYMBookReader: 4051c53dacabb761e3fe402cd7fcb54491ae0427
+  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+  SCPageViewController: ccff2d850c5e37b3573ab7f5a0cc68f6048c464f
+  SCScrollView: 59e93b7f230e7ee3c963f06dd0c67b57b8b9e237
+
+COCOAPODS: 0.38.2

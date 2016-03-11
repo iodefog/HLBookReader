@@ -1,0 +1,1 @@
+../../../SCScrollView/SCScrollView/easing.h

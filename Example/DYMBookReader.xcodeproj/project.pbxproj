@@ -51,8 +51,6 @@
 
 /* Begin PBXFileReference section */
 		28AB227F6467CFD2964549AA /* Pods-DYMBookReader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYMBookReader_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYMBookReader_Example/Pods-DYMBookReader_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		3EFEA8B9B51299F5EDBC723B /* DYMBookReader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = DYMBookReader.podspec; path = ../DYMBookReader.podspec; sourceTree = "<group>"; };
-		41AC2A06F7B5F3F1E1435553 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* DYMBookReader_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYMBookReader_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -92,7 +90,6 @@
 		C732743E1C9025DC00DBF71B /* DYMAppDelegate+IFly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DYMAppDelegate+IFly.h"; sourceTree = "<group>"; };
 		C732743F1C9025DC00DBF71B /* DYMAppDelegate+IFly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DYMAppDelegate+IFly.m"; sourceTree = "<group>"; };
 		D4533C221A0BFC8E088C6D70 /* Pods-DYMBookReader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DYMBookReader_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DYMBookReader_Tests/Pods-DYMBookReader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D4CAEA4603AFF1C8B0E29461 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		EA9554811BC3F3D8007B39F0 /* 花千骨.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "花千骨.plist"; sourceTree = "<group>"; };
 		EA9554901BC42EB0007B39F0 /* FlagBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FlagBlack.ttf; sourceTree = "<group>"; };
 		EAFE48091BC0247D00388431 /* demo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = demo.txt; sourceTree = "<group>"; };
@@ -136,7 +133,6 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
-				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for DYMBookReader */,
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
@@ -222,16 +218,6 @@
 				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
-			isa = PBXGroup;
-			children = (
-				3EFEA8B9B51299F5EDBC723B /* DYMBookReader.podspec */,
-				41AC2A06F7B5F3F1E1435553 /* README.md */,
-				D4CAEA4603AFF1C8B0E29461 /* LICENSE */,
-			);
-			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
 		8D3D286962529296FE259D77 /* Pods */ = {

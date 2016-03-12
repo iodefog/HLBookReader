@@ -111,10 +111,34 @@
                 pageVC.transitionStyle = self->_pageVC.transitionStyle;
                 [_pageVC setViewControllers:@[pageVC] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
             }
-            [self pageSpeackerWithVC:pageVC previousVC:nil];
+            [self pageSpeackerWithVC:pageVC previousVCArray:nil];
         }];
     }
 }
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(speakerSuccess) name:@"SpeakerSuccess" object:nil];
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)speakerSuccess{
+    NSLog(@"SpeakerSuccess");
+    
+    DYMBookPageVC *pageVC = [self pageVC:YES];
+    pageVC.pageTapHandler = _pageTapHandler;
+    pageVC.transitionStyle = self->_pageVC.transitionStyle;
+    [_pageVC setViewControllers:@[pageVC] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+    
+    [_dateSource setCurrentChapter:pageVC.chapter];
+    [[_dateSource currentChapter] didShowPageVC:pageVC];
+    [self pageSpeackerWithVC:pageVC previousVCArray:nil];
+}
+
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
@@ -166,15 +190,13 @@
     [[_dateSource currentChapter] didShowPageVC:vc];
     
 
-    //    IflyMSCManager
-//    NSTextContainer *container = vc.chapter.textContainers[vc.currentIndex];
-  
 //    NSLog(@"[vc.chapter content] = %@", [vc.chapter content]);
 //    NSLog(@"Current:--->%@", vc);
-    [self pageSpeackerWithVC:vc previousVC:previousViewControllers];
+    [self pageSpeackerWithVC:vc previousVCArray:previousViewControllers];
 }
 
-- (void)pageSpeackerWithVC:(DYMBookPageVC *)vc previousVC:(NSArray *)previousViewControllers{
+- (void)pageSpeackerWithVC:(DYMBookPageVC *)vc previousVCArray:(NSArray *)previousViewControllers{
+    //    IflyMSCManager
     NSRange range = [[vc.chapter layoutManager] glyphRangeForTextContainer:vc.textContainer ];
     id<UIApplicationDelegate> delegate = [UIApplication sharedApplication].delegate ;
     if ([delegate respondsToSelector:@selector(speakerDelay:)] && ([previousViewControllers firstObject] != vc)) {

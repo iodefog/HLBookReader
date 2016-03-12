@@ -162,6 +162,9 @@ static id manager = nil;
 - (void)onSpeakProgress:(int) progress
 {
     NSLog(@"speak progress %2d%%.", progress);
+    if(progress == 100){
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"SpeakerSuccess" object:nil];
+    }
 }
 
 
